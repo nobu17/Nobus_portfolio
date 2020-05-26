@@ -17,7 +17,7 @@ namespace InMemoryInfrastructure
                 "C#,Blazor, MDBootstrap", "GitHub.io",
                 @"https://nobus-portfolio.web.app", @"https://github.com/nobu17/Nobus_portfolio",
                 @"image/portfolio/kae1.svg",
-                new List<string>() { @"image/portfolio/pt1.png" }));
+                new List<string>() { @"image/portfolio/ptf1.png" }));
 
             works.Add(new WorkItem("2", "SURUGA-BU(駿河部)", "静岡県東部の紹介メディア",
                 "Ruby on Railsの勉強を兼ねて作成したサイト。Blogをフルスクラッチで作成した形。記事の投稿はMarkdownにて記載する。Herokuの無料プランで運用中。",
