@@ -14,7 +14,7 @@ namespace InMemoryInfrastructure
             var works = new List<WorkItem>();
             works.Add(new WorkItem("1", "Nobu's portfolio", "ポートフォリオサイト",
                 "本サイト。Blazorを使って作成したポートフォリオサイトです。なんちゃってDDDで実装しています。",
-                "C#,Blazor, MDBootstrap", "GitHub.io",
+                "C#,Blazor, MDBootstrap", "firebase",
                 @"https://nobus-portfolio.web.app", @"https://github.com/nobu17/Nobus_portfolio",
                 @"image/portfolio/kae1.svg",
                 new List<string>() { @"image/portfolio/ptf1.png" }));
