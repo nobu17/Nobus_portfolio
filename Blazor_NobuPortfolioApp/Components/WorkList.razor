@@ -6,28 +6,42 @@
         <!-- Grid column -->
         @if (WorkItems != null)
         {
-            @foreach (var item in WorkItems)
+        @foreach (var item in WorkItems)
             {
-                <div class="col-md-12 col-lg-4">
+        <div class="col-md-12 col-lg-4">
 
-                    <!-- Card -->
-                    <div class="card hoverable mb-4" @onclick="@(() => ShowDetailDialog(item))" data-toggle="modal" data-target="#basicExampleModal">
+            <!-- Card -->
+            <div class="card hoverable mb-4" @onclick="@(() => ShowDetailDialog(item))" data-toggle="modal" data-target="#basicExampleModal">
 
-                        <!-- Card image -->
-                        <img class="card-img-top img-fluid" src="@item.ThumbNailUrl" alt="Card image cap" style="padding: 15px;">
+                <!-- Card image -->
+                <img class="card-img-top img-fluid" src="@item.ThumbNailUrl" alt="Card image cap" style="padding: 15px;">
 
-                        <!-- Card content -->
-                        <div class="card-body">
+                <!-- Card content -->
+                <div class="card-body">
 
-                            <h5 class="my-3">@item.Name</h5>
-                            <p class="card-text text-uppercase mb-3">@item.SubTitle</p>
+                    <h5 class="my-3">@item.Name</h5>
+                    <p class="card-text text-uppercase mb-3">@item.SubTitle</p>
 
-                        </div>
-
-                    </div>
                 </div>
+
+            </div>
+        </div>
             }
         }
     </div>
 </section>
-
+<!-- preload images-->
+<div>
+    @if (WorkItems != null)
+    {
+        foreach (var item in WorkItems)
+        {
+            foreach(var image in item.ImageUrls)
+            {
+                <div style="width:1px; height:1px; visibility:hidden; overflow:hidden">
+                    <img src="@image" />
+                </div>
+            }
+        }
+    }
+</div>

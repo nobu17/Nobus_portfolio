@@ -15,7 +15,7 @@ namespace InMemoryInfrastructure
             works.Add(new WorkItem("1", "Nobu's portfolio", "ポートフォリオサイト",
                 "本サイト。Blazorを使って作成したポートフォリオサイトです。なんちゃってDDDで実装しています。",
                 "C#,Blazor, MDBootstrap", "GitHub.io",
-                @"https://surugabu.com/", @"https://yahoo.co.jp",
+                @"https://nobus-portfolio.web.app", @"https://github.com/nobu17/Nobus_portfolio",
                 @"image/portfolio/kae1.svg",
                 new List<string>() { @"image/portfolio/surugabu1.png" }));
 
@@ -30,7 +30,7 @@ namespace InMemoryInfrastructure
                 "個人的な趣味の古本購入時のツールとして開発。Angularを使用。APIはAWS LambdaでGrapghQLで作成。",
                 "Typescript, Angular, PrimeNG(WEB-UI), Node.js(API)", "firebase, AWS(Lambda, API Gateway)",
                 @"https://angularbooksearch.web.app/", @"https://github.com/nobu17/AngularBookScanApp/",
-                @"image/portfolio/book1.svg",
+                @"image/portfolio/bookt3.png",
                 new List<string>() { @"image/portfolio/angb1.png", @"image/portfolio/angb2.png", @"image/portfolio/angb3.png" }));
 
             works.Add(new WorkItem("4", "CHICO★SPICE", "カレーショップ",

@@ -18,7 +18,8 @@ namespace Blazor_NobuPortfolioApp.Components
         {
             var parameters = new ModalParameters();
             parameters.Add("WorkItem", item);
-            Modal.Show<WorkDetailDialog>(item.Name + " ( " + item.SubTitle + " ) ", parameters);
+            Modal.Show<WorkDetailDialog>(item.Name, parameters);
+            // Modal.Show<WorkDetailDialog>(item.Name + " ( " + item.SubTitle + " ) ", parameters);
         }
     }
 }
