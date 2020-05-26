@@ -1,0 +1,33 @@
+﻿@inject IModalService Modal
+
+<section class="dark-grey-text text-center">
+    <h1 id="works" class="font-weight-bold pt-5 pb-2 text-info text-center title"><img src="image/nav/btl.svg" width="92" height="92">Works</h1>
+    <div class="row">
+        <!-- Grid column -->
+        @if (WorkItems != null)
+        {
+            @foreach (var item in WorkItems)
+            {
+                <div class="col-md-12 col-lg-4">
+
+                    <!-- Card -->
+                    <div class="card hoverable mb-4" @onclick="@(() => ShowDetailDialog(item))" data-toggle="modal" data-target="#basicExampleModal">
+
+                        <!-- Card image -->
+                        <img class="card-img-top img-fluid" src="@item.ThumbNailUrl" alt="Card image cap" style="padding: 15px;">
+
+                        <!-- Card content -->
+                        <div class="card-body">
+
+                            <h5 class="my-3">@item.Name</h5>
+                            <p class="card-text text-uppercase mb-3">@item.SubTitle</p>
+
+                        </div>
+
+                    </div>
+                </div>
+            }
+        }
+    </div>
+</section>
+

@@ -1,0 +1,24 @@
+﻿body {
+    margin-top: 40px;
+}
+
+.title {
+    font-size: 70px;
+}
+
+.blazored-modal-content {
+    height: 560px;
+    overflow-y: auto;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 37vh;
+    object-fit: cover;
+}
+
+.port-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
