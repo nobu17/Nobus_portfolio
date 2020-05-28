@@ -49,7 +49,7 @@ namespace InMemoryInfrastructure
 
             works.Add(new WorkItem("6", "ItemObserveApp", "古本価格監視アプリ",
                 "個人的な趣味の古本購入時のツールとしてXamarin.Formsで開発。APIはAWS Lambda上にGo言語で作成。15分間隔で価格を監視して、閾値が下がったらメールにて通知する。",
-                "C#, Xamarin.Forms, Prism(UI), Go(API)", "AWS(Cognito, Lambda, API Gateway, SQS, SNS)",
+                "C#, Xamarin.Forms, Prism(UI), Go(API)", "スマホアプリ、AWS(Cognito, Lambda, API Gateway, SQS, SNS)",
                 @"https://github.com/nobu17/ItemObserveApp", @"https://github.com/nobu17/ItemObserveApp",
                 @"image/portfolio/book2.svg",
                 new List<string>() { @"image/portfolio/noimage.png" }));
@@ -60,6 +60,14 @@ namespace InMemoryInfrastructure
                 @"https://fujimusicpj.web.app/", @"https://github.com/nobu17/fujimusic",
                 @"image/portfolio/guitar1.svg",
                 new List<string>() { @"image/portfolio/fuji1.png" }));
+
+            works.Add(new WorkItem("6", "YahooAuctionReminder", "ヤフオク監視アプリ",
+                "当時利用していたヤフオクで入札忘れが多く、防止のために終了5分前くらいに通知してくれるスマホアプリ。ヤフオクのAPIは当時廃止された直後でスクレイピングで頑張った。Xamarin.Formsのおかげでかなり楽に実装できた。",
+                "C#, Xamarin.Forms, Prism(UI)", "スマホアプリ",
+                @"", @"https://github.com/nobu17/YahooAuctionReminder",
+                @"image/portfolio/shop.svg",
+                new List<string>() { @"image/portfolio/noimage.png" }));
+
 
             works.Add(new WorkItem("7", "ISBN Book Titler", "本の自炊時のリネームツール",
                 "初めて作成したフリーソフト。ScanSnap等でPDF等に電子化したファイルをバーコードから書籍情報を取得してリネーム等を行うツール。色々な人に使っていただけているようです。",
