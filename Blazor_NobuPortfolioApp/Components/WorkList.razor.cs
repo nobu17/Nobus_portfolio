@@ -1,5 +1,4 @@
-﻿using Blazored.Modal;
-using Domains.Models.Portofolios;
+﻿using Domains.Models.Portofolios;
 using Microsoft.AspNetCore.Components;
 using System;
 using System.Collections.Generic;
@@ -10,16 +9,14 @@ namespace Blazor_NobuPortfolioApp.Components
 {
     public partial class WorkList
     {
+        private WorkDisplayDialog workDisplayDialog;
 
         [Parameter]
         public List<WorkItem> WorkItems { get; set; }
 
-        public void ShowDetailDialog(WorkItem item)
+        public async void ShowDetailDialog(WorkItem item)
         {
-            var parameters = new ModalParameters();
-            parameters.Add("WorkItem", item);
-            Modal.Show<WorkDetailDialog>(item.Name, parameters);
-            // Modal.Show<WorkDetailDialog>(item.Name + " ( " + item.SubTitle + " ) ", parameters);
+            await workDisplayDialog.ShowDialog(item);
         }
     }
 }

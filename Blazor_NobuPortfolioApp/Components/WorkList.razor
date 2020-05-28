@@ -1,6 +1,4 @@
-﻿@inject IModalService Modal
-
-<section class="dark-grey-text text-center">
+﻿<section class="dark-grey-text text-center">
     <h1 id="works" class="font-weight-bold pt-5 pb-2 text-info text-center title"><img src="image/nav/btl.svg" width="92" height="92">Works</h1>
     <div class="row">
         <!-- Grid column -->
@@ -36,12 +34,14 @@
     {
         foreach (var item in WorkItems)
         {
-            foreach(var image in item.ImageUrls)
+            foreach (var image in item.ImageUrls)
             {
-                <div style="width:1px; height:1px; visibility:hidden; overflow:hidden">
-                    <img src="@image" />
-                </div>
+    <div style="width:1px; height:1px; visibility:hidden; overflow:hidden">
+        <img src="@image" />
+    </div>
             }
         }
     }
 </div>
+
+<WorkDisplayDialog @ref="workDisplayDialog" />
