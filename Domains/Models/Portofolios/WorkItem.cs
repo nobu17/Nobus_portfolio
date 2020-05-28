@@ -13,8 +13,8 @@ namespace Domains.Models.Portofolios
             if (string.IsNullOrWhiteSpace(description)) throw new ArgumentException(nameof(description));
             if (string.IsNullOrWhiteSpace(useLanguages)) throw new ArgumentException(nameof(useLanguages));
             if (string.IsNullOrWhiteSpace(useInfrastructures)) throw new ArgumentException(nameof(useInfrastructures));
-            if (string.IsNullOrWhiteSpace(url)) throw new ArgumentException(nameof(url));
-            if (string.IsNullOrWhiteSpace(sourceCodeUrl)) throw new ArgumentException(nameof(sourceCodeUrl));
+            // if (string.IsNullOrWhiteSpace(url)) throw new ArgumentException(nameof(url));
+            // if (string.IsNullOrWhiteSpace(sourceCodeUrl)) throw new ArgumentException(nameof(sourceCodeUrl));
             if (string.IsNullOrWhiteSpace(thumbNailUrl)) throw new ArgumentException(nameof(thumbNailUrl));
             if (imageUrls == null) throw new ArgumentException(nameof(imageUrls));
 

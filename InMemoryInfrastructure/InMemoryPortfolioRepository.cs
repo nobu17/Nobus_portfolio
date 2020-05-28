@@ -43,14 +43,14 @@ namespace InMemoryInfrastructure
             works.Add(new WorkItem("5", "Braidal Quiz", "リアルタイム集計クイズ",
                 "結婚式の余興のために作成。firebase storeを使用してリアルタイムの集計を実施して、回答状況を可視化しました。",
                 "Nuxt.js, Vue.js, Vuetify", "firebase(Hosting, Store, Storage),",
-                @"https://github.com/nobu17/bridal_quiz", @"https://github.com/nobu17/bridal_quiz",
+                @"", @"https://github.com/nobu17/bridal_quiz",
                 @"image/portfolio/marrage1.svg",
                 new List<string>() { @"image/portfolio/brd1.png", @"image/portfolio/brd2.png" }));
 
             works.Add(new WorkItem("6", "ItemObserveApp", "古本価格監視アプリ",
                 "個人的な趣味の古本購入時のツールとしてXamarin.Formsで開発。APIはAWS Lambda上にGo言語で作成。15分間隔で価格を監視して、閾値が下がったらメールにて通知する。",
                 "C#, Xamarin.Forms, Prism(UI), Go(API)", "スマホアプリ、AWS(Cognito, Lambda, API Gateway, SQS, SNS)",
-                @"https://github.com/nobu17/ItemObserveApp", @"https://github.com/nobu17/ItemObserveApp",
+                @"", @"https://github.com/nobu17/ItemObserveApp",
                 @"image/portfolio/book2.svg",
                 new List<string>() { @"image/portfolio/noimage.png" }));
 
@@ -67,7 +67,6 @@ namespace InMemoryInfrastructure
                 @"", @"https://github.com/nobu17/YahooAuctionReminder",
                 @"image/portfolio/shop.svg",
                 new List<string>() { @"image/portfolio/noimage.png" }));
-
 
             works.Add(new WorkItem("7", "ISBN Book Titler", "本の自炊時のリネームツール",
                 "初めて作成したフリーソフト。ScanSnap等でPDF等に電子化したファイルをバーコードから書籍情報を取得してリネーム等を行うツール。色々な人に使っていただけているようです。",
