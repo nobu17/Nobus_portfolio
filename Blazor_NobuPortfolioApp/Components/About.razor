@@ -1,6 +1,6 @@
 ﻿<section class="dark-grey-text text-center">
     <h1 class="font-weight-bold pt-5 pb-2 text-info text-center title" id="about">About</h1>
-    <div class="row">
+    <div class="row about-root">
         <div class="col-md-4 col-sm-12 my-auto">
 
             <img src="image/nav/about.png" class="img-fluid mx-auto d-block" alt="gero gero image">
@@ -9,7 +9,7 @@
 
         <div class="col-md-8 col-sm-12 p-2">
 
-            <h5 class="font-weight-normal mb-3 text-center">ご挨拶</h5>
+            <h5 class="font-weight-normal mb-3 text-center"><span class="about-sub-title">ご挨拶</span></h5>
 
             <p>
                 初めまして。静岡県でエンジニアとして働いているNobuと申します。<br>
@@ -18,21 +18,30 @@
                 本サイトではこれまで個人的に開発を行った品々を中心に紹介しようと思います。<br>
             </p>
 
-            <ul class="list-unstyled mt-5 mb-0">
-                <li>
-                    <h5 class="font-weight-normal mb-3 text-center">Skills (Programming)</h5>
-                    <p class="mb-4">C#(.NET, Blazor, Silverlight)<br />Javascirpt,Typescript (Node.js, Vue.js(Nuxt.js), Angular, React),<br /> Go, Ruby(Ruby on Rails) etc...</p>
+            <ul class="list-unstyled mt-5 mb-3">
+                <li class="mb-5">
+                    <h5 class="font-weight-normal mb-3 text-center"><span class="about-sub-title">資格など</span></h5>
+                    <p class="mb-1 font-weight-normal">TOEIC Score: 800</p>
+                    <p class="mb-1">基本情報技術者試験、応用情報技術者試験、セキュリティスペシャリスト</p>
                 </li>
-                <li>
-                    <h5 class="font-weight-normal mb-3 text-center">Skills (Infrastructure)</h5>
-                    <p class="mb-4">Windows Server, Hyper-V<br />AWS(EC-2, Lambda, etc...), Firebase(Hosting, Store, etc...),<br />SQL(SQL Server, Postgres SQL),<br />NoSQL(Dynamo, Redis, Fire Store) etc...</p>
-                </li>
-                <li>
-                    <h5 class="font-weight-normal mb-3 text-center">Media</h5>
-                    <p class="mb-1"><i class="fab fa-github fa-lg"></i><a href="https://github.com/nobu17" target="_blank" rel="noopener">GitHub</a></p>
-                    <p class="mb-1"><i class="fab fa-twitter fa-fw blue-text"></i><a href="https://twitter.com/nobu23" target="_blank" rel="noopener">Twitter</a></p>
-                    <p class="mb-1"><a href="https://qiita.com/nobu17" target="_blank" rel="noopener">Qiita</a></p>
-                    <p class="mb-1"><a href="http://nobunobu1717.site" target="_blank" rel="noopener">Blog</a></p>
+                <li class="mb-4">
+                    <h5 class="font-weight-normal mb-3 text-center"><span class="about-sub-title">Link</span></h5>
+                    <a class="btn text-capitalize" style="background-color: #333333; color:white;" href="https://github.com/nobu17" target="_blank" rel="noopener" role="button">
+                        <i class="fab fa-github me-2 mr-1"></i>
+                        GitHub
+                    </a>
+                    <a class="btn text-capitalize" style="background-color: #25d366; color:white;" href="https://qiita.com/nobu17" target="_blank" rel="noopener" role="button">
+                        <i class="fab fa-envira me-2 mr-2"></i>
+                        Qiita
+                    </a>
+                    <a class="btn btn-info text-capitalize" href="http://nobunobu1717.site" target="_blank" rel="noopener" role="button">
+                        <i class="fas fa-coffee me-2 mr-2"></i>
+                        Blog
+                    </a>
+                    <a class="btn btn-primary text-capitalize" style="background-color: #55acee;" href="https://twitter.com/nobu23" target="_blank" rel="noopener" role="button">
+                        <i class="fab fa-twitter me-2 mr-2"></i>
+                        Twitter
+                    </a>
                 </li>
             </ul>
 
@@ -40,6 +49,11 @@
 
     </div>
 </section>
-@code {
+@code { [Inject]
+            protected IJSRuntime JSRuntime { get; set; }
 
-}
+            protected override async Task OnAfterRenderAsync(bool firstRender)
+            {
+                await JSRuntime.InvokeVoidAsync("startAboutAnimation");
+                await base.OnAfterRenderAsync(firstRender);
+            } }

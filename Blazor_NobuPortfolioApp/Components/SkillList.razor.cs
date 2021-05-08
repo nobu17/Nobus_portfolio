@@ -8,24 +8,17 @@ using System.Threading.Tasks;
 
 namespace Blazor_NobuPortfolioApp.Components
 {
-    public partial class WorkList
+    public partial class SkillList
     {
-        private WorkDisplayDialog workDisplayDialog;
-
         [Inject]
         protected IJSRuntime JSRuntime { get; set; }
 
         [Parameter]
-        public List<WorkItem> WorkItems { get; set; }
-
-        public async void ShowDetailDialog(WorkItem item)
-        {
-            await workDisplayDialog.ShowDialog(item);
-        }
+        public List<SkillItem> SkillItems { get; set; }
 
         protected override async Task OnAfterRenderAsync(bool firstRender)
         {
-            await JSRuntime.InvokeVoidAsync("startWorkCardAnimation");
+            await JSRuntime.InvokeVoidAsync("startBarAnimation");
             await base.OnAfterRenderAsync(firstRender);
         }
     }

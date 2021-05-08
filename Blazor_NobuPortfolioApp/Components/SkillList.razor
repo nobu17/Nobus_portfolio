@@ -1,0 +1,30 @@
+﻿<section class="dark-grey-text text-center">
+    <h1 id="skills" class="font-weight-bold pt-5 pb-2 text-info text-center title">Skills</h1>
+    <div class="row">
+        @if (SkillItems != null)
+        {
+@foreach (var skillItem in SkillItems)
+{
+
+<div class="col-md-12 col-lg-6">
+    <div class="text-left">
+        <h3 class="skill-title">@skillItem.Name</h3>
+    </div>
+    @foreach (var skillsub in skillItem.SubItems)
+    {
+<div class="skill ml-2" data-proficiency="@skillsub.Proficiency">
+    <div class="skill-info">
+        <p class="skill-name font-weight-normal">
+            <i class="fas fa-angle-double-right fa-sm"></i>
+            @skillsub.Name
+        </p>
+    </div>
+    <div class="skill-bar-container ml-2">
+        <div class="skill-bar"></div>
+    </div>
+</div>}
+</div>      }}
+    </div>
+
+</section>
+

@@ -28,6 +28,67 @@
             // alert("hoge");
             $('#workDialog').modal();
         };
+
+        function startWorkCardAnimation() {
+            // Intersection observerに渡すコールバック関数
+            const cb = function (entries, observer) {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            };
+
+            // Intersection observerに渡すオプション
+            const options = {
+                rootMargin: "-50px 0px"
+            };
+
+            // IntersectionObserver初期化
+            const io = new IntersectionObserver(cb, options);
+            io.POLL_INTERVAL = 100; // Polyfillの設定
+            // DOM要素を取得
+            const cards = document.querySelectorAll('.work-card');
+            cards.forEach(el => {
+                io.observe(el);
+            });
+        };
+
+        function startBarAnimation() {
+            // カウントアップの設定
+            const animationDuration = 2000;
+            const frameDuration = 1000 / 60;
+            const totalFrames = Math.round(animationDuration / frameDuration);
+            const easeOut = t => t * (2 - t);
+            // Intersection observerに渡すコールバック関数
+            const cb = function (entries, observer) {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        const proficiencyVal = entry.target.dataset.proficiency;
+                        const skillBar = entry.target.querySelector('.skill-bar');
+
+                        skillBar.style.width = proficiencyVal + '%';
+
+                        observer.unobserve(entry.target);
+                    }
+                });
+            };
+
+            // Intersection observerに渡すオプション
+            const options = {
+                rootMargin: "-50px 0px"
+            };
+
+            // IntersectionObserver初期化
+            const io = new IntersectionObserver(cb, options);
+            io.POLL_INTERVAL = 100; // Polyfillの設定
+            // DOM要素を取得
+            const skillEls = document.querySelectorAll('.skill');
+            skillEls.forEach(el => {
+                io.observe(el);
+            });
+        };
     </script>
 </head>
 
@@ -55,6 +116,9 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.18.0/js/mdb.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0/dist/smooth-scroll.polyfills.min.js"></script>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"></script>
+
 
     <script src="_framework/blazor.webassembly.js"></script>
 </body>
