@@ -49,11 +49,4 @@
 
     </div>
 </section>
-@code { [Inject]
-            protected IJSRuntime JSRuntime { get; set; }
-
-            protected override async Task OnAfterRenderAsync(bool firstRender)
-            {
-                await JSRuntime.InvokeVoidAsync("startAboutAnimation");
-                await base.OnAfterRenderAsync(firstRender);
-            } }
+@code {  }
