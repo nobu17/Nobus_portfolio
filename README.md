@@ -4,4 +4,4 @@ This is my portfolio which is created by Blazor WebAssembly.
 
 # Link 
 
-https://nobus-portfolio.web.app/
+https://nobu17.github.io/Nobus_portfolio/
