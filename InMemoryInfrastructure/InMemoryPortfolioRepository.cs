@@ -119,8 +119,8 @@ namespace InMemoryInfrastructure
 
             works.Add(new WorkItem("9", "Nobu's portfolio", "ポートフォリオサイト",
                 "本サイト。遂に正式リリースとなったBlazor WebAssemblyを使って作成したポートフォリオサイトです。某DDD本のアウトプットとしてなんちゃってDDDで実装。",
-                "C#,Blazor, MDBootstrap", "firebase",
-                @"https://nobus-portfolio.web.app", @"https://github.com/nobu17/Nobus_portfolio",
+                "C#,Blazor, MDBootstrap", "GitHub.io",
+                @"https://nobu17.github.io/Nobus_portfolio/", @"https://github.com/nobu17/Nobus_portfolio",
                 @"image/portfolio/kae1.svg",
                 new List<string>() { @"image/portfolio/ptf1.png" }));
 
