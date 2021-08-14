@@ -13,10 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\image\portfolio\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Domains\Domains.csproj" />
     <ProjectReference Include="..\InMemoryInfrastructure\InMemoryInfrastructure.csproj" />
   </ItemGroup>

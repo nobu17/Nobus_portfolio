@@ -42,7 +42,7 @@ namespace InMemoryInfrastructure
                     new SkillSubItem("10","Node.js", 60),
                     new SkillSubItem("11","Vue.js, Nuxt.js", 60),
                     new SkillSubItem("12","Angular", 30),
-                    new SkillSubItem("13","React", 20),
+                    new SkillSubItem("13","React", 40),
                 }));
 
             skills.Add(new SkillItem("3", "Others",
@@ -95,6 +95,13 @@ namespace InMemoryInfrastructure
         private List<WorkItem> GetWorkItems()
         {
             var works = new List<WorkItem>();
+
+            works.Add(new WorkItem("12", "fujimusic", "ギター教室(React版)",
+                "私も参加しているギター教室。Vue.jsで作ったものをオライリーのReact本でのアウトプットとしてReact Hookを使って再構築したもの。",
+                "React(Javascript), Material UI", "firebase(Hosting, Store, Authentication, Storage),",
+                @"https://fujimusicpj.web.app/", @"https://github.com/nobu17/fujimusic_react_app",
+                @"image/portfolio/guitar1.svg",
+                new List<string>() { @"image/portfolio/fujireact1.png" }));
 
             works.Add(new WorkItem("11", "CHICO★SPICE予約", "店舗予約サイト",
                 "CHICO★SPICEの店舗予約サイト。Djangoのお勉強を兼ねて作成。UIはBulumaを使用してみた。PythonAnywhere上で無料ホスト。",
@@ -153,7 +160,7 @@ namespace InMemoryInfrastructure
                 new List<string>() { @"image/portfolio/noimage.png" }));
 
             works.Add(new WorkItem("3", "fujimusic", "ギター教室",
-                "私も参加しているギター教室。初めてVue.jsで本格的に作成したWEBサイト。firebaseのノウハウが何もない状態で作ったので、データストアとしてfire storeを使わずにfunctionsとjsonを使って実装。パフォーマンスが悪いのでいつか直したい。",
+                "私も参加しているギター教室。初めてVue.jsで本格的に作成したWEBサイト。firebaseのノウハウが何もない状態で作ったので、データストアとしてfire storeを使わずにfunctionsとjsonを使って実装。パフォーマンスが悪いのでいつか直したい。=> Reactで作り直しました。",
                 "Vue.js(Javascript), Vuetify, Node.js(Typescript)", "firebase(Hosting, Functions, Authentication, Storage),",
                 @"https://fujimusicpj.web.app/", @"https://github.com/nobu17/fujimusic",
                 @"image/portfolio/guitar1.svg",
