@@ -110,6 +110,13 @@ namespace InMemoryInfrastructure
         {
             var works = new List<WorkItem>();
 
+            works.Add(new WorkItem("13", "キラリ高校学園祭 2021", "オンライン学園祭",
+                "コロナの影響でハイブリット形式で開催された学園祭のウェブサイトを構築。TypescriptでReactを使って構築。Chakra UIの癖が多くてちょっと苦戦した。",
+                "React(Typescript), Chakra UI", "firebase(Hosting, Store, Authentication, Storage),",
+                @"", @"https://github.com/nobu17/kirari_fes_app",
+                @"image/portfolio/kfes.png",
+                new List<string>() { @"image/portfolio/kfes.png" }));
+
             works.Add(new WorkItem("12", "fujimusic", "ギター教室(React版)",
                 "私も参加しているギター教室。Vue.jsで作ったものをオライリーのReact本でのアウトプットとしてReact Hookを使って再構築したもの。",
                 "React(Javascript), Material UI", "firebase(Hosting, Store, Authentication, Storage),",
