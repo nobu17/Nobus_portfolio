@@ -20,12 +20,12 @@ namespace Blazor_NobuPortfolioApp.Components
 
         public async void ShowDetailDialog(WorkItem item)
         {
-            await workDisplayDialog.ShowDialog(item);
+            await workDisplayDialog?.ShowDialog(item);
         }
 
         protected override async Task OnAfterRenderAsync(bool firstRender)
         {
-            await JSRuntime.InvokeVoidAsync("startWorkCardAnimation");
+            await JSRuntime.InvokeVoidAsync("startFadeupAnimation", ".work-card");
             await base.OnAfterRenderAsync(firstRender);
         }
     }

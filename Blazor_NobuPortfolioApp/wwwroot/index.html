@@ -25,11 +25,10 @@
     <script src="js/app.js"></script>
     <script>
         function openWorkDisplayDialog() {
-            // alert("hoge");
             $('#workDialog').modal();
         };
 
-        function startWorkCardAnimation() {
+        function startFadeupAnimation(target) {
             // Intersection observerに渡すコールバック関数
             const cb = function (entries, observer) {
                 entries.forEach((entry) => {
@@ -49,7 +48,7 @@
             const io = new IntersectionObserver(cb, options);
             io.POLL_INTERVAL = 100; // Polyfillの設定
             // DOM要素を取得
-            const cards = document.querySelectorAll('.work-card');
+            const cards = document.querySelectorAll(target);
             cards.forEach(el => {
                 io.observe(el);
             });

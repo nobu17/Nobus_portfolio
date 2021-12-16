@@ -10,7 +10,7 @@ namespace InMemoryInfrastructure
         public InMemoryPortfolioRepository()
         {
             _portfolios = new Dictionary<string, Portfolio>();
-            var folio = new Portfolio("1", GetWorkItems(), GetSkillItems());
+            var folio = new Portfolio("1", GetWorkItems(), GetSkillItems(), GetCertificationItems());
 
             _portfolios.Add("1", folio);
         }
@@ -22,6 +22,20 @@ namespace InMemoryInfrastructure
                 return _portfolios[id];
             }
             return null;
+        }
+
+        private List<CertificationItem> GetCertificationItems()
+        {
+            var items = new List<CertificationItem>();
+            items.Add(new CertificationItem("1", "Azure Solutions Architect Expert(AZ-303,304)", "2021/9", "image/portfolio/qua/az_exp.png"));
+            items.Add(new CertificationItem("2", "Azure Administrator Associate(AZ-103)", "2021/8", "image/portfolio/qua/az_asso.png"));
+            items.Add(new CertificationItem("3", "Azure Fundamentals(AZ-900)", "2021/5", "image/portfolio/qua/az_fund.png"));
+            items.Add(new CertificationItem("4", "TOEIC Score: 800", "2018", "image/portfolio/qua/cert.svg"));
+            items.Add(new CertificationItem("5", "認定スクラムプロダクトオーナー(LSPO)", "2021/9", "image/portfolio/qua/cert2.svg"));
+            items.Add(new CertificationItem("6", "情報セキュリティスペシャリスト", "2013/8", "image/portfolio/qua/cert.svg"));
+            items.Add(new CertificationItem("7", "応用情報技術者試験", "2011/8", "image/portfolio/qua/cert.svg"));
+            items.Add(new CertificationItem("8", "基本情報技術者試験", "2010/8", "image/portfolio/qua/cert.svg"));
+            return items;
         }
 
         private List<SkillItem> GetSkillItems()
@@ -101,7 +115,7 @@ namespace InMemoryInfrastructure
                 "React(Javascript), Material UI", "firebase(Hosting, Store, Authentication, Storage),",
                 @"https://fujimusicpj.web.app/", @"https://github.com/nobu17/fujimusic_react_app",
                 @"image/portfolio/guitar1.svg",
-                new List<string>() { @"image/portfolio/fujireact1.png" }));
+                new List<string>() { @"image/portfolio/fuji_react1.png" }));
 
             works.Add(new WorkItem("11", "CHICO★SPICE予約", "店舗予約サイト",
                 "CHICO★SPICEの店舗予約サイト。Djangoのお勉強を兼ねて作成。UIはBulumaを使用してみた。PythonAnywhere上で無料ホスト。",

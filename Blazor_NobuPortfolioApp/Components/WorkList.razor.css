@@ -1,0 +1,15 @@
+﻿/*
+    work card animation
+*/
+
+.work-card {
+    position: relative;
+    bottom: -50px;
+    opacity: 0;
+    transition: bottom 1s, opacity 1s;
+}
+
+    .work-card.show {
+        bottom: 0;
+        opacity: 1;
+    }

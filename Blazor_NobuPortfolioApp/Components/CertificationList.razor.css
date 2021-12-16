@@ -1,0 +1,15 @@
+﻿/*
+    card animation
+*/
+
+.cert-card {
+    position: relative;
+    bottom: -50px;
+    opacity: 0;
+    transition: bottom 1s, opacity 1s;
+}
+
+    .cert-card.show {
+        bottom: 0;
+        opacity: 1;
+    }

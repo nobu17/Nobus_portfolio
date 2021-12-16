@@ -6,15 +6,17 @@ namespace Domains.Models.Portofolios
 {
     public class Portfolio : IEquatable<Portfolio>
     {
-        public Portfolio(string id, List<WorkItem> workItems, List<SkillItem> skillItems)
+        public Portfolio(string id, List<WorkItem> workItems, List<SkillItem> skillItems, List<CertificationItem> certificationItems)
         {
             if (string.IsNullOrWhiteSpace(id)) throw new ArgumentException(nameof(id));
             if (workItems == null) throw new ArgumentException(nameof(workItems));
             if (skillItems == null) throw new ArgumentException(nameof(skillItems));
+            if (certificationItems == null) throw new ArgumentException(nameof(certificationItems));
 
             Id = id;
             WorkItems = workItems;
             SkillItems = skillItems;
+            CertificationItems = certificationItems;
         }
 
         public string Id { get; private set; }
@@ -22,6 +24,8 @@ namespace Domains.Models.Portofolios
         public List<WorkItem> WorkItems { get; private set; }
 
         public List<SkillItem> SkillItems { get; private set; }
+
+        public List<CertificationItem> CertificationItems { get; private set; }
 
         public bool Equals(Portfolio other)
         {
