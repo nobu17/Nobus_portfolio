@@ -111,7 +111,7 @@ namespace InMemoryInfrastructure
             var works = new List<WorkItem>();
 
             works.Add(new WorkItem("13", "キラリ高校学園祭 2021", "オンライン学園祭",
-                "コロナの影響でハイブリット形式で開催された学園祭のウェブサイトを構築。TypescriptでReactを使って構築。Chakra UIの癖が多くてちょっと苦戦した。",
+                "コロナの影響でハイブリット形式で開催された学園祭のウェブサイトを構築。ReactでTypescritptを使用。Chakra UIの癖が強く、UIはちょっと苦戦した。",
                 "React(Typescript), Chakra UI", "firebase(Hosting, Store, Authentication, Storage),",
                 @"", @"https://github.com/nobu17/kirari_fes_app",
                 @"image/portfolio/kfes.png",

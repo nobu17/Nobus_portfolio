@@ -1,2 +1,33 @@
-﻿body {
+﻿
+/*
+    About
+*/
+
+.about-sub-title {
+    background: linear-gradient(transparent 90%, #ffd800 90%);
+}
+
+.about-root {
+    animation: fadeIn 1.5s ease 0s 1 normal;
+    -webkit-animation: fadeIn 1.5s ease 0s 1 normal;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
