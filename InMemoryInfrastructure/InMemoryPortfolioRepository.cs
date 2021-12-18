@@ -134,7 +134,7 @@ namespace InMemoryInfrastructure
             works.Add(new WorkItem("10", "Oreilly Map", "オライリーの動物本への愛",
                 "オライリーの特約店を地図上から探せるサイト。情報はオーム社のHPからNode.jsでスクレイピングしてjson化して利用。UIはMudaBlazorを使用してみた。",
                 "C#,Blazor, MudaBlazor, Node.js(Tool)", "firebase",
-                @"https://o-reillyjapanbooksearch.web.app", @"https://github.com/nobu17/oreilly_map",
+                @"https://nobu17.github.io/oreilly_map/", @"https://github.com/nobu17/oreilly_map",
                 @"image/portfolio/ckame.png",
                 new List<string>() { @"image/portfolio/olmap.png" }));
 
