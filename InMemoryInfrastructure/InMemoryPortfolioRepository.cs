@@ -1,4 +1,4 @@
-﻿using Domains.Models.Portofolios;
+using Domains.Models.Portofolios;
 using System.Collections.Generic;
 
 namespace InMemoryInfrastructure
@@ -110,6 +110,20 @@ namespace InMemoryInfrastructure
         {
             var works = new List<WorkItem>();
 
+            works.Add(new WorkItem("15", "CHICO★SPICEテイクアウト予約", "テイクアウト予約サイト",
+                "CHICO★SPICEのテイクアウト予約サイト。フロントエンドはReat、サーバーサイドはGo(Gin)で実装。UIは結構頑張って使いやすくなった。",
+                "Go, Gin, Typescript, Material UI, PostgreSQL", "Fly.io, Firebase",
+                @"https://chicotakeout.fly.dev", @"https://github.com/nobu17/chico_takeout",
+                @"image/portfolio/chiko.png",
+                new List<string>() { @"image/portfolio/chicotake.png" }));
+
+            works.Add(new WorkItem("14", "ISBN Book Titler Fyne", "自炊本リネームツールVer2",
+                "以前.NETで作成していた、ISBN Book TitlerをGoで作成し直したもの。GUIはFyneを使用。Windows以外でも動作する(はず)。",
+                "Go, Fyne", "ローカルアプリ",
+                @"https://nobunobu1717.site/?p=2635", @"https://github.com/nobu17/ISBN-Book-Titler-Fyne",
+                @"image/portfolio/bookt3.png",
+                new List<string>() { @"image/portfolio/fyne1.png" }));
+
             works.Add(new WorkItem("13", "キラリ高校学園祭 2021", "オンライン学園祭",
                 "コロナの影響でハイブリット形式で開催された学園祭のウェブサイトを構築。ReactでTypescritptを使用。Chakra UIの癖が強く、UIはちょっと苦戦した。",
                 "React(Typescript), Chakra UI", "firebase(Hosting, Store, Authentication, Storage),",
@@ -147,7 +161,7 @@ namespace InMemoryInfrastructure
 
             works.Add(new WorkItem("8", "SURUGA-BU(駿河部)", "静岡県東部の紹介メディア",
                 "Railsの勉強を兼ねて作成したサイト。Blogをフルスクラッチで作成した形。記事の投稿はMarkdownにて記載する。Herokuの無料プランで運用中(StorageだけGCP)。無料である程度できるのは嬉しいが、同じ無料でもfirebaseでSPAで作る方が数倍楽とわかった。",
-                "Ruby on Rails", "Heroku, PostgresSQL, Redis, GCS",
+                "Ruby on Rails", "Heroku, PostgreSQL, Redis, GCS",
                 @"https://surugabu.com/", @"https://github.com/nobu17/surugabu/",
                 @"image/portfolio/maguro.svg",
                 new List<string>() { @"image/portfolio/surugabu1.png" }));
